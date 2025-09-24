@@ -4,7 +4,6 @@ def display_menu():
     print("2. Remove Item")
     print("3. View List")
     print("4. Exit")
-
 def main():
     shopping_list = []
     while True:
@@ -14,7 +13,6 @@ def main():
         except ValueError:
             print("Invalid choice. Please enter a number.")
             continue
-
         if choice == 1:
             item = input("Enter the item to add: ").strip()
             if item:
@@ -22,7 +20,6 @@ def main():
                 print(f"'{item}' has been added to the shopping list.")
             else:
                 print("You must enter a valid item name.")
-        
         elif choice == 2:
             item = input("Enter the item to remove: ").strip()
             if item in shopping_list:
@@ -30,7 +27,6 @@ def main():
                 print(f"'{item}' has been removed from the shopping list.")
             else:
                 print(f"'{item}' not found in the shopping list.")
-        
         elif choice == 3:
             if shopping_list:
                 print("\nYour Shopping List:")
@@ -38,13 +34,10 @@ def main():
                     print(f"{idx}. {item}")
             else:
                 print("Your shopping list is currently empty.")
-        
         elif choice == 4:
             print("Goodbye!")
             break
-        
         else:
             print("Invalid choice. Please try again.")
-
 if __name__ == "__main__":
     main()
